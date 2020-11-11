@@ -7,6 +7,7 @@ const userInput = document.querySelector("#feelings")
 const date = document.querySelector('#date')
 const temp = document.querySelector('#temp')
 const content =  document.querySelector('#content')
+const apiKey = '&appid=3a82e0d9d0d6f53668e2cad5de15bab9&units=imperial';
 
 
 const postData = async (path , data={})=>{
@@ -66,7 +67,6 @@ const getData =async (url)=> {
 
 generate.addEventListener('click',()=>{
   const zipCode = zip.value
-  const apiKey = '&appid=3a82e0d9d0d6f53668e2cad5de15bab9&units=imperial';
   const url = `https://api.openweathermap.org/data/2.5/weather?zip=${zipCode}${apiKey}`
   getData(url, apiKey, zipCode)
 })
