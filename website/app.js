@@ -66,8 +66,8 @@ const getData =async (url)=> {
 
 generate.addEventListener('click',()=>{
   const zipCode = zip.value
-  const apiKey="my_api_key"
-  const url = `https://api.openweathermap.org/data/2.5/weather?zip=${zipCode}&appid=${apiKey}`
+  const apiKey="3a82e0d9d0d6f53668e2cad5de15bab9"
+  const url = `https://api.openweathermap.org/data/2.5/weather?zip=${zipCode}&appid=${apiKey}&units=metric`
   getData(url, apiKey, zipCode)
 })
 
